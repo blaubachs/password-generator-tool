@@ -19,9 +19,10 @@ var specialCharValues = ['~','','`','!','@','#','$','%','^','&','*','(',')','_',
 // This is taking input for length of characters from the user.
 function passwordLength() { 
   var userInput = prompt("Pick a length of characters between 8 and 128.");
+
   if (userInput<=7 || userInput>=129) {
     window.alert("Must be a number between 8 and 128.");
-  } else if (userInput>=8 || userInput<=128) {
+  } else if (userInput>=8 && userInput<129) {
     window.alert("The next few boxes will give you options for character types.");
     charLengthCorrect = true;
     charLength=userInput;
@@ -48,11 +49,10 @@ function characterUppercase() {
   var upperAlert = confirm("Would you like uppercase characters? OK for yes, Cancel for no.");
   if (upperAlert == true) {
     uppercase = true;
-    // console.log("upcase "+uppercase);
   } else {
     uppercase = false;
-    // console.log("upcase "+uppercase);
   }
+
 }
 
 //Deciding if we want lowercase letters or not, and adding a flag that tells a function called later whether we want this type of character or not.
@@ -60,10 +60,8 @@ function characterLowercase() {
   var lowerAlert = confirm("Would you like lowercase characters? OK for yes, Cancel for no.");
   if (lowerAlert == true) {
     lowercase = true;
-    // console.log("lowcase "+lowercase);
   } else {
     lowercase = false;
-    // console.log("lowcase "+lowercase);
   }
   
 }
@@ -73,10 +71,8 @@ function characterNum() {
   var numAlert = confirm("Would you like numeric values? OK for yes, Cancel for no.");
   if (numAlert == true) {
     numeric = true;
-    // console.log("number "+numeric);
   } else {
     numeric = false;
-    // console.log("number "+numeric);
   }
 
 }
@@ -86,21 +82,15 @@ function characterSpecial() {
   var specialAlert = confirm("Would you like special characters? OK for yes, Cancel for no.");
   if (specialAlert == true) {
     specialChars = true;
-    // console.log("spec "+specialChars);
   } else {
     specialChars = false;
-    // console.log("spec "+specialChars);
   }
 
 }
 
 //randomly replacing pieces in an array using a for loop, this takes the flags 
 function placeChars() {
-  function charIndexRandom() { 
 
-    Math.floor(Math.random()*4); 
-
-  }
   var charFlags = [uppercase,lowercase,numeric,specialChars]
   var holdPlacer = [uppercaseValues,lowercaseValues,numericValues,specialCharValues]
 
@@ -117,6 +107,7 @@ function placeChars() {
       console.log("No types of characters chosen.")
     }
   }
+
 }
 
 // Write password to the #password input
@@ -130,14 +121,13 @@ function writePassword() {
   uppercase = false;
   numeric = false;
   specialChars = false;
-  console.log(lowercase,uppercase,numeric,specialChars)
 
 }
 
 function generatePassword() {
   console.log(itemArray);
   passwordLength();
-  if (charLengthCorrect=true) {
+  if (charLengthCorrect) {
     decideArrayLength();
     characterUppercase();
     characterLowercase();
