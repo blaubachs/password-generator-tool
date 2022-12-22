@@ -38,7 +38,8 @@ function decideArrayLength() {
       itemArray.push("");
     }
   } else {
-    console.log("Incorrect data type or size.");
+    alert("Incorrect data type or size.");
+    return;
   }
 }
 
@@ -47,10 +48,10 @@ function characterUppercase() {
   var upperAlert = confirm("Would you like uppercase characters? OK for yes, Cancel for no.");
   if (upperAlert == true) {
     uppercase = true;
-    console.log("upcase "+uppercase);
+    // console.log("upcase "+uppercase);
   } else {
     uppercase = false;
-    console.log("upcase "+uppercase);
+    // console.log("upcase "+uppercase);
   }
 }
 
@@ -59,12 +60,12 @@ function characterLowercase() {
   var lowerAlert = confirm("Would you like lowercase characters? OK for yes, Cancel for no.");
   if (lowerAlert == true) {
     lowercase = true;
-    console.log("lowcase "+lowercase);
+    // console.log("lowcase "+lowercase);
   } else {
     lowercase = false;
-    console.log("lowcase "+lowercase);
+    // console.log("lowcase "+lowercase);
   }
-
+  
 }
 
 //Deciding if we want numeric values or not, and adding a flag that tells a function called later whether we want this type of character or not.
@@ -72,10 +73,10 @@ function characterNum() {
   var numAlert = confirm("Would you like numeric values? OK for yes, Cancel for no.");
   if (numAlert == true) {
     numeric = true;
-    console.log("number "+numeric);
+    // console.log("number "+numeric);
   } else {
     numeric = false;
-    console.log("number "+numeric);
+    // console.log("number "+numeric);
   }
 
 }
@@ -85,10 +86,10 @@ function characterSpecial() {
   var specialAlert = confirm("Would you like special characters? OK for yes, Cancel for no.");
   if (specialAlert == true) {
     specialChars = true;
-    console.log("spec "+specialChars);
+    // console.log("spec "+specialChars);
   } else {
     specialChars = false;
-    console.log("spec "+specialChars);
+    // console.log("spec "+specialChars);
   }
 
 }
@@ -143,10 +144,11 @@ function generatePassword() {
     characterNum();
     characterSpecial();
     placeChars()
-    console.log(itemArray);
+    // console.log(itemArray);
     return itemArray.join("")
   } else {
     alert("Please try again.")
+    return;
   }
 
 }

@@ -2,44 +2,24 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+The motivation of this project was to create a tool to generate a password based off of a few different variables. I learned a lot about functions and how to write something with JavaScript. This solves the problem of not having a tool to generate passwords randomly.
 
 ## Installation
 
-No installation required. Just visit the link to the deployed site.
+No installation required. Just visit the link to the deployed site [here](https://blaubachs.github.io/password-generator-tool/).
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To use this tool, click the "generate password" button, and follow the prompts on screen. It will then generate a password based off of the choices you make.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-![password-gen-image](./images/passwordgenerator.png);
-
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+![password-gen-image](./images/passwordgenerator.png)
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+No license.
 
 ---
 
 ## Features
 
-If your project has a lot of features, list them here.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+This project features the ability to decide if you want a certain type of character or not in the password generated. It allows you to choose between uppercase, lowercase, numeric, and special characters, and then outputs a result in the text box when completed.
